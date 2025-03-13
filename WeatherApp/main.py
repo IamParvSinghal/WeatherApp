@@ -53,9 +53,9 @@ def change_background(condition):
         condition (str): Weather condition description (e.g., 'clear sky', 'rain').
     """
     image_map = {
-        "clear sky": "WeatherApp/images/clearsky.png",
-        "rain": "WeatherApp/images/raining.png",
-        "clouds": "WeatherApp/images/cloudy.jpg",
+        "clear sky": "images/clearsky.png",
+        "rain": "images/raining.png",
+        "clouds": "images/cloudy.jpg",
         "haze": "WeatherApp/images/haze.png",
         "mist": "WeatherApp/images/mist.jpg",
     }
