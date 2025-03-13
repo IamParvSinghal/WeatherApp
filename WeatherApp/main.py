@@ -4,6 +4,7 @@ from tkinter import messagebox
 from PIL import Image, ImageTk
 import xml.etree.ElementTree as xml_parser
 import requests as rq
+import os
 
 # Fetch weather details using XML API
 def weatherOf(city_name):
@@ -17,7 +18,7 @@ def weatherOf(city_name):
         dict: A dictionary containing weather details such as temperature, humidity, wind direction, etc.,
               or None if the city is not found.
     """
-    api_key = "a964d331378c1b746dec6177a6841ee8"
+    api_key = os.getenv("api_key")
     api_url = f"https://api.openweathermap.org/data/2.5/weather?q={city_name}&mode=xml&appid={api_key}"
 
     response = rq.get(api_url)
