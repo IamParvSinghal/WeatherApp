@@ -56,11 +56,11 @@ def change_background(condition):
         "clear sky": "images/clearsky.png",
         "rain": "images/raining.png",
         "clouds": "images/cloudy.jpg",
-        "haze": "WeatherApp/images/haze.png",
-        "mist": "WeatherApp/images/mist.jpg",
+        "haze": "images/haze.png",
+        "mist": "images/mist.jpg",
     }
 
-    image_file = image_map.get(condition, "WeatherApp/images/default.jpg")
+    image_file = image_map.get(condition, "images/default.jpg")
     load_background_image(image_file, app_window.winfo_width(), app_window.winfo_height())
 
 # Load and set the background image
@@ -141,7 +141,7 @@ app_window.geometry(f"{window_size}x{window_size}+{x_coordinate}+{y_coordinate}"
 # Background image setup
 bg_label = tk.Label(app_window)
 bg_label.place(relwidth=1, relheight=1)
-load_background_image("WeatherApp/images/default.jpg", app_window.winfo_width(), app_window.winfo_height())
+load_background_image("images/default.jpg", app_window.winfo_width(), app_window.winfo_height())
 
 # Title label
 title_label = tk.Label(app_window, text="PARV'S WEATHER APP", font=("Times New Roman", 28, "bold"))
